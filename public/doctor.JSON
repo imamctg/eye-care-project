@@ -1,0 +1,32 @@
+[
+    {
+        "name": "AMIT PAUL",
+        "speciality": "Cornea Surgeon",
+        "img": "https://i.ibb.co/vPNyjv9/doctor6.jpg"
+    },
+    {
+        "name": "Prof. Karina",
+        "speciality": "Retina Specialist",
+        "img": "https://i.ibb.co/Jx0ZdQh/doctor4.jpg"
+    },
+    {
+        "name": "NIKE ELI",
+        "speciality": "Eye Surgeon",
+        "img": "https://i.ibb.co/RQbbVyw/doctor2.jpg"
+    },
+    {
+        "name": "Prof. Dr. Amtaia",
+        "speciality": "Ophthalmology",
+        "img": "https://i.ibb.co/YtfqxB4/doctor5.jpg"
+    },
+    {
+        "name": "DR. MORISAS",
+        "speciality": "Contact Lens & Phaco",
+        "img": "https://i.ibb.co/m8VQV3c/doctor1.jpg"
+    },
+    {
+        "name": "Prof. DR. Sanika",
+        "speciality": "Ophthalmology ",
+        "img": "https://i.ibb.co/71YpRnm/doctor3.jpg"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 101,
+        "name": "PRIMARY EYE CARE",
+        "description": "Eye care  ophthalmologists screen and treat for conditions such as cataracts, diabetic retinopathy, glaucoma, and macular degeneration. If needed, patients with serious eye problems are referred to Eyecare.",
+        "img": "https://i.ibb.co/Khfx5xV/eye-laser.jpg"
+    },
+    {
+        "id": 102,
+        "name": "CORNEA SERVICE",
+        "description": "Eye care hospital of The Cornea Service of Wills Eye Hospital treats patients with disorders of the cornea and outer layers of the eye, including the conjunctiva and sclera. Additionally, we treat conditions.",
+        "img": "https://i.ibb.co/Yj8xBg3/cornea.jpg"
+    },
+    {
+        "id": 103,
+        "name": "REFRACTIVE SURGERY",
+        "description": "Refractive surgery is a short, painless procedure that reduces or eliminates the need for glasses and contacts to correct nearsightedness (myopia), farsightedness (hyperopia) and astigmatism.",
+        "img": "https://i.ibb.co/zQwYVSB/banner1.jpg"
+    },
+    {
+        "id": 104,
+        "name": "GLAUCOMA SERVICE",
+        "description": "Eye care hospital specialists are dedicated to providing world-class glaucoma treatment and care. The disease is often asymptomatic, and people may lose their vision without knowing it. We probide best servics in this section.",
+        "img": "https://i.ibb.co/HBZTbnZ/corneatransplant.jpg"
+    },
+    {
+        "id": 105,
+        "name": "RETINA CARE",
+        "description": "The Retina Care Center is a specialized ophthalmology practice with retina specialists dedicated to caring for patients with eye problems specific to the retina. Founded by Eric P. Suan, M.D. in Baltimore, Maryland on August 31.",
+        "img": "https://i.ibb.co/Khfx5xV/eye-laser.jpg"
+    },
+    {
+        "id": 106,
+        "name": "CONTRANCT LENSE",
+        "description": "Eyecare The Contact Lens Clinic at CEITC provides contact lens services that can correct nearsightedness, farsightedness, and astigmatism and at the same time educates the patients about its uses and care.It is best cure from us.",
+        "img": "https://i.ibb.co/g3cpfGH/refractor.jpg"
+    }
+]

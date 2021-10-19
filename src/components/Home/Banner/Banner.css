@@ -1,0 +1,13 @@
+.banner{
+    display: flex;
+    align-items: center;
+
+}
+.banner-text{
+    background-color: blue;
+    height: 500px;
+    color: white;
+};
+.banner-image{
+    height: 500px;
+}
