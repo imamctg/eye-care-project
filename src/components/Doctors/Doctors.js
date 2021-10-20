@@ -5,7 +5,7 @@ const Doctors = () => {
     const [doctors, setDoctors] = useState([]);
 
     useEffect(() => {
-        fetch('./doctor.JSON')
+        fetch('./doctor.json')
             .then(res => res.json())
             .then(data => setDoctors(data))
     }, [])

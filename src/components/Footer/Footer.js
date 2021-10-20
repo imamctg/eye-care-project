@@ -1,10 +1,9 @@
 import { faFacebook, faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkerAlt, faMarker } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import FooterLink from './FooterLink';
-// import FooterQuickLinks from '../FooterQuickLinks/FooterQuickLinks';
+
 
 const Footer = () => {
     return (

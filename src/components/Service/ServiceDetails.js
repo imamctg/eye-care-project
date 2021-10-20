@@ -8,7 +8,7 @@ const ServiceDetails = () => {
     const [data, setData] = useState([]);
     console.log(data)
     useEffect(() => {
-        fetch('/services.JSON')
+        fetch('/services.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -20,9 +20,6 @@ const ServiceDetails = () => {
     return (
 
         <div>
-            {/* <img src={ExactIteam[0]?.img} alt="" />
-            <h3>Name : {ExactIteam[0]?.name}</h3>
-            <h5>Description : {ExactIteam[0]?.description}</h5> */}
 
             <div className="container">
                 <Card className="mb-2 card shadow-lg" style={{ width: '400px' }}>

@@ -6,6 +6,7 @@ import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
 const provider = new GoogleAuthProvider();
+
 const useFirebase = () => {
 
     const auth = getAuth();
@@ -13,10 +14,7 @@ const useFirebase = () => {
     const [error, setError] = useState("");
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    // const [isLogin, setIsLogin] = useState(false)
     const [isLoading, setIsLoading] = useState(true);
-
-    // const [name, setName] = useState('');
 
 
     const handleGoogleLogin = () => {
@@ -26,10 +24,9 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
 
     };
-    // const handleNameChange = e => {
-    //     setName(e.target.value);
-    // }
+
     const handleEmailChange = (e) => {
+        console.log(e.target.value)
         setEmail(e.target.value)
     };
 
@@ -50,19 +47,21 @@ const useFirebase = () => {
     };
 
     const handleUserRegister = (e) => {
+        console.log(email, password)
         e.preventDefault();
         setIsLoading()
         if (password.length < 6) {
             setError('Password must be Six character length')
             return;
         }
-        // isLogin && handleUserLogin(email, password)
+
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 console.log(result.user);
                 const user = result.user;
                 setUser(user)
-                setError('');
+                setUser({})
+                setError('Registration Successfull ! Please Click Login Button');
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -71,9 +70,15 @@ const useFirebase = () => {
 
     };
 
-    const handleUserLogin = (email, password) => {
-        setIsLoading(true)
+    const handleUserLogin = (e) => {
+
+        e.preventDefault();
+        setIsLoading(false)
         return signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                console.log(result.user)
+                setUser(result.user)
+            })
 
             .finally(() => setIsLoading(false));
     };
@@ -89,7 +94,7 @@ const useFirebase = () => {
             }
             setIsLoading(false);
         });
-    }, []);
+    }, [auth]);
 
     return {
         user,
@@ -98,10 +103,11 @@ const useFirebase = () => {
         handleLogout,
         handleUserRegister,
         handleUserLogin,
-        // handleNameChange,
         handleEmailChange,
         handlePasswordChange,
-        isLoading
+        isLoading,
+
+
 
     };
 

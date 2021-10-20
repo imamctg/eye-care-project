@@ -1,13 +1,14 @@
-import React from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-// import useFirebase from '../../../hooks/useFirebase';
+
 
 const Login = () => {
-    const { handleGoogleLogin, handleEmailChange, handlePasswordChange, handleUserLogin, error } = useAuth()
+    const { handleGoogleLogin, handleUserLogin } = useAuth()
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || './';
+
+
 
     const signInUsingGoogle = () => {
         handleGoogleLogin()
@@ -16,13 +17,7 @@ const Login = () => {
             })
     }
 
-    const signInUsingEmailPassword = () => {
-        handleUserLogin()
-            .then(result => {
-                console.log(result.user)
-                history.push(redirect_uri)
-            })
-    }
+
     return (
         <div>
             <div className="div d-flex justify-content-center align-items-center">
@@ -30,15 +25,14 @@ const Login = () => {
 
                 <div className="container">
                     <h3>Please Login</h3>
-                    <form action="">
+
+                    <form onSubmit={handleUserLogin} action="">
 
                         <br />
-                        <input required onBlur={handleEmailChange} type="email" placeholder="email" />
+                        <input required type="email" placeholder="email" />
                         <br />
                         <br />
-                        <input required onBlur={handlePasswordChange} type="password" placeholder="password" />
-                        <br />
-                        <p className="text-danger">{error}</p>
+                        <input required type="password" placeholder="password" />
 
                         <br />
                         <input className="submit btn btn-primary" type="submit" value="Login" />
