@@ -8,7 +8,13 @@ const Login = () => {
     const history = useHistory();
     const redirect_uri = location.state?.from || './';
 
-
+    const handleLogin = (e) => {
+        e.preventDefault()
+        handleUserLogin()
+            .then(result => {
+                history.push(redirect_uri)
+            })
+    }
 
     const signInUsingGoogle = () => {
         handleGoogleLogin()
@@ -26,7 +32,7 @@ const Login = () => {
                 <div className="container">
                     <h3>Please Login</h3>
 
-                    <form onSubmit={handleUserLogin} action="">
+                    <form onSubmit={handleLogin} action="">
 
                         <br />
                         <input required type="email" placeholder="email" />

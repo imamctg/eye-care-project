@@ -6,7 +6,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
 
-    const { handleUserRegister, handleEmailChange, handlePasswordChange, error } = useAuth();
+    const { handleUserRegister, handleNameChange, handleEmailChange, handlePasswordChange, error } = useAuth();
 
 
     return (
@@ -14,7 +14,8 @@ const Register = () => {
             <div>
                 <h2>Create Account</h2>
                 <form onSubmit={handleUserRegister} action="">
-
+                    <input required onBlur={handleNameChange} type="name" placeholder="name" />
+                    <br />
                     <input required onBlur={handleEmailChange} type="email" placeholder="email" />
                     <br />
                     <input required onBlur={handlePasswordChange} type="password" placeholder="password" />
